@@ -1,53 +1,12 @@
 import React from 'react';
 import './App.scss';
+import { Home } from './components/Home/Home';
 
 export const App: React.FC = () => {
     return (
         <div className="wrapper">
 
-            <section className="home">
-                <div className="home__bg">
-                    <img src="#" alt="bg"/>
-                </div>
-                <div className="home__body">
-                    <header className="home__header header">
-                        <div className="header__menu">
-                            <ul className="header__list">
-                                <li>Home</li>
-                                <li>Shop</li>
-                                <li>Story</li>
-                                <li>About</li>
-                                <li>Blog</li>
-                                <li>Testimonials</li>
-                            </ul>
-                        </div>
-                        <div className="header__logo">
-                            <img src="#" alt="logo"/>
-                        </div>
-
-                        <div className="header__panel">
-                            <div className="header__services">
-                                <ul className="header__list">
-                                    <li>search</li>
-                                    <li>user</li>
-                                    <li>cart</li>
-                                </ul>
-                            </div>
-                            <div className="header__socials">
-                                <ul className="header__list">
-                                    <li>f</li>
-                                    <li>p</li>
-                                    <li>i</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </header>
-
-                    <div className="home__button button">
-                        <button>Shop now</button>
-                    </div>
-                </div>
-            </section>
+            <Home />
 
             <section className="what">
                 <div className="what__title title">
@@ -276,8 +235,9 @@ export const App: React.FC = () => {
             <footer className="footer">
 
                 <div className="footer__body">
-                    <div className="footer__logo">
-                        <img src="#" alt="our logo"/>
+                    <div className="footer__logo logo">
+                        Organic <span>fresh foods</span>
+                        {/*<img src="#" alt="our logo"/>*/}
                     </div>
                     <div className="footer__information">
 
