@@ -3,6 +3,23 @@
   min-height: 100vh;
 }
 
+.logo {
+  font-size: 53px;
+  position: relative;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+  user-select: none;
+
+  span {
+    position: absolute;
+    font-size: 20px;
+    bottom: -15px;
+    right: 0;
+  }
+}
+
 .title {
   h2 {
     font-size: 50px;
@@ -30,7 +47,7 @@
       top: calc(50% - 7px);
       right: 35px;
 
-      background: url("/assets/images/arrow.png");
+      background: url("assets/images/common/arrow.png");
     }
   }
 }
