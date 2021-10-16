@@ -1,0 +1,79 @@
+@import "src/variables";
+
+.testimonials {
+  padding: $defaultPadding;
+  background-color: #6B2D1E;
+  color: #FFFFFF;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    //background-color: #FFFFFF;
+  }
+  &__title {
+    margin-bottom: 80px;
+    span {
+      color: #F2612D;
+    }
+  }
+  &__comments {}
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //background-color: blanchedalmond;
+    position: relative;
+    padding: 100px 280px 20px 180px;
+
+    margin-bottom: 120px;
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__content {
+    //position: relative;
+    display: flex;
+    z-index: 2;
+  }
+
+  &__name {
+    color: #521905;
+    font-weight: 800;
+    opacity: 0.6;
+    font-size: 200px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    text-align: center;
+    line-height: 200%;
+
+    position: relative;
+    z-index: 1;
+  }
+  &__text {
+    max-width: 500px;
+  }
+  &__address {
+    color: #F7AE3B;
+  }
+  &__photo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__arrows {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 100px;
+  }
+}
