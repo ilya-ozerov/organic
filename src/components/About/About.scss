@@ -1,0 +1,75 @@
+@import "src/variables";
+
+.about {
+  padding: $defaultPadding;
+  //min-height: 100vh;
+  display: flex;
+  background-color: #158172;
+  color: white;
+
+
+  margin-bottom: -155px;
+
+  &__image {
+    flex: 1 1 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+
+    //img {
+    //  max-width: 100%;
+    //}
+  }
+
+  &__info {
+    flex: 1 1 50%;
+  }
+  &__title {
+
+    position: relative;
+
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 55px;
+      font-weight: 800;
+      span {
+        color: #CAE941;
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: -10px;
+      left: 75px;
+    }
+  }
+  &__list {
+    margin-bottom: 50px;
+
+    li {
+      font-size: 21px;
+      margin-bottom: 30px;
+      padding-left: 40px;
+
+      background: url("../../assets/images/about/listMarker.png") left center no-repeat;
+
+      span {
+        font-weight: 800;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &__button {
+    button {
+      background-color: rgba(0,0,0,0);
+      border: 2px solid #FCB438;
+    }
+  }
+}
