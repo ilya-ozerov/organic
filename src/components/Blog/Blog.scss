@@ -1,0 +1,82 @@
+@import "src/variables";
+
+.blog {
+  padding: $defaultPadding;
+
+  min-width: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 50px;
+
+  }
+  &__content {
+    display: flex;
+  }
+
+  &__image {}
+
+  &__body {
+    padding: 100px 0px 0px 50px;
+
+    position: relative;
+  }
+
+  &__subtitle {
+
+    &:before {
+      content: '';
+      width: 687px;
+      height: 12px;
+      background-color: #F7AE3B;
+      position: absolute;
+      left: -10px;
+      top: 50px;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    margin-bottom: 20px;
+
+    h3 {
+      color: #F2612D;
+      font-weight: 800;
+      font-size: 30px;
+    }
+  }
+  &__date {
+    color: #1E1E1E;
+  }
+  &__text {
+    padding: 45px 60px;
+    max-width: 620px;
+
+    line-height: 200%;
+  }
+  &__button {
+    display: inline-block;
+    button {
+      font-style: italic;
+      color: #1E1E1E;
+      padding: 0px 50px 0px 5px;
+      font-size: 18px;
+      background-color: rgba(0,0,0,0);
+      display: inline-block;
+      &:after {
+        right: 0;
+      }
+    }
+  }
+}
