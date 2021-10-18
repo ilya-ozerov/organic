@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/organic/static/css/main.206862ed.chunk.css",
-    "main.js": "/organic/static/js/main.6bec1e7d.chunk.js",
-    "main.js.map": "/organic/static/js/main.6bec1e7d.chunk.js.map",
-    "runtime-main.js": "/organic/static/js/runtime-main.f8bacbf9.js",
-    "runtime-main.js.map": "/organic/static/js/runtime-main.f8bacbf9.js.map",
-    "static/js/2.9d397bf7.chunk.js": "/organic/static/js/2.9d397bf7.chunk.js",
-    "static/js/2.9d397bf7.chunk.js.map": "/organic/static/js/2.9d397bf7.chunk.js.map",
-    "static/js/3.d96dee92.chunk.js": "/organic/static/js/3.d96dee92.chunk.js",
-    "static/js/3.d96dee92.chunk.js.map": "/organic/static/js/3.d96dee92.chunk.js.map",
+    "main.css": "/organic/static/css/main.1026c3df.chunk.css",
+    "main.js": "/organic/static/js/main.070716e1.chunk.js",
+    "main.js.map": "/organic/static/js/main.070716e1.chunk.js.map",
+    "runtime-main.js": "/organic/static/js/runtime-main.fa261540.js",
+    "runtime-main.js.map": "/organic/static/js/runtime-main.fa261540.js.map",
+    "static/js/2.77f5daac.chunk.js": "/organic/static/js/2.77f5daac.chunk.js",
+    "static/js/2.77f5daac.chunk.js.map": "/organic/static/js/2.77f5daac.chunk.js.map",
+    "static/js/3.eaf5f666.chunk.js": "/organic/static/js/3.eaf5f666.chunk.js",
+    "static/js/3.eaf5f666.chunk.js.map": "/organic/static/js/3.eaf5f666.chunk.js.map",
     "index.html": "/organic/index.html",
-    "static/css/main.206862ed.chunk.css.map": "/organic/static/css/main.206862ed.chunk.css.map",
-    "static/js/2.9d397bf7.chunk.js.LICENSE.txt": "/organic/static/js/2.9d397bf7.chunk.js.LICENSE.txt",
+    "static/css/main.1026c3df.chunk.css.map": "/organic/static/css/main.1026c3df.chunk.css.map",
+    "static/js/2.77f5daac.chunk.js.LICENSE.txt": "/organic/static/js/2.77f5daac.chunk.js.LICENSE.txt",
     "static/media/1.aea2f2d3.jpeg": "/organic/static/media/1.aea2f2d3.jpeg",
     "static/media/2.9f9de628.jpeg": "/organic/static/media/2.9f9de628.jpeg",
     "static/media/3.8b5f2e27.jpeg": "/organic/static/media/3.8b5f2e27.jpeg",
@@ -31,7 +31,7 @@
     "static/media/Shopify Pay.97221b41.svg": "/organic/static/media/Shopify Pay.97221b41.svg",
     "static/media/Visa.952e57f3.svg": "/organic/static/media/Visa.952e57f3.svg",
     "static/media/Footer.scss": "/organic/static/media/message.dfb28fa7.svg",
-    "static/media/bg.86fc1747.png": "/organic/static/media/bg.86fc1747.png",
+    "static/media/bg.bd366e7a.png": "/organic/static/media/bg.bd366e7a.png",
     "static/media/Instagram.scss": "/organic/static/media/instIcon.6e05a044.svg",
     "static/media/mainPhoto.83793fe9.jpeg": "/organic/static/media/mainPhoto.83793fe9.jpeg",
     "static/media/smoothie.1d8b882b.png": "/organic/static/media/smoothie.1d8b882b.png",
@@ -39,12 +39,12 @@
     "static/media/smoothie2.fb712705.png": "/organic/static/media/smoothie2.fb712705.png",
     "static/media/smoothie3.3932351f.png": "/organic/static/media/smoothie3.3932351f.png",
     "static/media/smoothie4.f6ab6c83.png": "/organic/static/media/smoothie4.f6ab6c83.png",
-    "static/media/welcomeSummer.612952eb.png": "/organic/static/media/welcomeSummer.612952eb.png"
+    "static/media/welcome.fa20f5e2.png": "/organic/static/media/welcome.fa20f5e2.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8bacbf9.js",
-    "static/js/2.9d397bf7.chunk.js",
-    "static/css/main.206862ed.chunk.css",
-    "static/js/main.6bec1e7d.chunk.js"
+    "static/js/runtime-main.fa261540.js",
+    "static/js/2.77f5daac.chunk.js",
+    "static/css/main.1026c3df.chunk.css",
+    "static/js/main.070716e1.chunk.js"
   ]
 }
