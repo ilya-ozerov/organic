@@ -122,6 +122,10 @@
       &:after {
         right: 0;
       }
+      &:hover {
+        transform: none;
+        text-decoration: underline;
+      }
     }
   }
 }
