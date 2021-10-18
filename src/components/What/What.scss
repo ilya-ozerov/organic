@@ -3,7 +3,11 @@
 .what {
 
   padding: $defaultPadding;
-  //min-height: 100vh;
+
+
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
 
   display: flex;
   flex-direction: column;
@@ -11,6 +15,10 @@
 
   &__title {
     margin-bottom: 55px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
   }
   &__text {
     text-align: center;
@@ -19,14 +27,39 @@
     max-width: 915px;
 
     margin-bottom: 55px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
   }
 
-  &__table {}
+  &__table {
+    @media (max-width: 1000px) {
+      display: flex;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
   &__row {
     display: flex;
     border-bottom: 1px solid #F6EDDE;
     &:last-child {
       border-bottom: none;
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      border-bottom: none;
+      border-right: 1px solid #F6EDDE;
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      border-right: none;
     }
   }
   &__item {
@@ -37,6 +70,14 @@
     width: 250px;
     height: 150px;
     border-right: 1px solid #F6EDDE;
+
+    @media (max-width: 1000px) {
+      border-right: none;
+      border-bottom: 1px solid #F6EDDE;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
 
     img {
       margin-bottom: 30px;
