@@ -6,28 +6,72 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #F8AB40;
 
   &__body {
     padding: $defaultPadding;
     display: grid;
     grid-template-columns: 3fr 2fr 2fr 3fr;
-    //align-items: center;
+
     justify-items: center;
-    background-color: #F8AB40;
+
     width: 100%;
+
+    @media (max-width: 1600px) {
+      gap: 20px;
+      max-width: 600px;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+              "sub sub"
+              "pay pay"
+              "info logo";
+    }
+
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
+
+    @media (max-width: 500px) {
+      gap: 20px;
+      //max-width: 600px;
+      text-align: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "sub" "pay" "info" "logo";
+    }
+
   }
+
   // common styles
   &__title {
     font-size: 26px;
     font-weight: 800;
     color: #FFFFFF;
     margin-bottom: 30px;
+
+    @media (max-width: 1600px) {
+      //text-align: center;
+    }
+
   }
+
   // ------------------ //
   &__logo {
-    align-self: center;
+    @media (max-width: 1600px) {
+      grid-area: logo;
+    }
+
   }
-  &__information {}
+
+  &__information {
+    @media (max-width: 1600px) {
+      grid-area: info;
+      width: 100%;
+    }
+  }
+
   &__list {
     li {
       color: #6D450C;
@@ -36,7 +80,14 @@
     }
   }
 
-  &__payments {}
+  &__payments {
+    @media (max-width: 1600px) {
+      grid-area: pay;
+      width: 100%;
+      align-self: center;
+      //max-width: 600px;
+    }
+  }
 
   &__systems {
     display: grid;
@@ -46,13 +97,20 @@
     justify-items: center;
   }
 
-  &__item {}
+  &__item {
+  }
 
-  &__image {}
+  &__image {
+  }
 
   &__follow {
     width: 100%;
+    @media (max-width: 1600px) {
+      grid-area: sub;
+      //max-width: 600px;
+    }
   }
+
   &__subtitle {
     background-color: #FFFFFF;
     height: 60px;
@@ -80,6 +138,7 @@
     }
 
   }
+
   &__socials {
     //background-color: #0AA566;
     display: grid;
@@ -87,12 +146,25 @@
     grid-template-areas: "empty follow networks";
     justify-items: center;
     align-items: center;
+
+    @media (max-width: 450px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "follow" "networks";
+      gap: 20px;
+    }
+
   }
+
   &__link {
     grid-area: follow;
     color: #6D450C;
     font-weight: 800;
     position: relative;
+
+    @media (max-width: 450px) {
+      //font-size: 14px;
+    }
 
     &:before {
       content: '';
@@ -112,6 +184,7 @@
     grid-gap: 20px;
     //background-color: #1E1E1E;
   }
+
   &__network {
     width: 30px;
     height: 30px;
@@ -123,32 +196,45 @@
   &__bottom {
     background-color: #6D2819;
     width: 100%;
-    //display: flex;
-    //justify-content: center;
     color: #FFFFFF;
-    //padding: 25px 0px;
-
     display: grid;
     grid-template-columns: 2fr 6fr 2fr;
     grid-template-areas: "empty copy button";
+
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
+
   &__copy {
     grid-area: copy;
     font-size: 13px;
     color: #AF8A82;
     justify-self: center;
     line-height: 60px;
+
+    @media (max-width: 767px) {
+      order: 2;
+    }
   }
+
   &__button {
     grid-area: button;
     justify-self: center;
+
+    @media (max-width: 767px) {
+      order: 1;
+    }
 
     button {
       position: relative;
       font-size: 16px;
       font-weight: 700;
       color: #FFFFFF;
-      background-color: rgba(0,0,0,0);
+      background-color: rgba(0, 0, 0, 0);
 
       padding: 20px;
 
