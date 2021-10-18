@@ -1,21 +1,19 @@
 import React from 'react';
 import './About.scss';
-
-import welcomeSummer from '../../assets/images/about/welcomeSummer.png';
+import welcome from '../../assets/images/about/welcome.png';
 import line from '../../assets/images/about/line.png';
 
 export const About: React.FC = () => {
     return (
         <section className="about">
             <div className="about__image">
-                <img src={welcomeSummer} alt="welcome summer"/>
+                <img src={welcome} alt="welcome summer"/>
             </div>
             <div className="about__info">
                 <div className="about__title">
                     <h2>
-                        What makes Smoothie <br/> an <span>awesome drink?</span>
+                        What makes Smoothie <br/> an <span>awesome drink?<img src={line} alt=""/></span>
                     </h2>
-                    <img src={line} alt=""/>
                 </div>
                 <ul className="about__list">
                     <li><span>Crunchy</span> Puffs Texture</li>
