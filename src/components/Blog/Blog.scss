@@ -3,12 +3,11 @@
 .blog {
   padding: $defaultPadding;
 
-  min-width: 100vh;
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  //min-width: 100vh;
 
   &__row {
     display: flex;
@@ -21,17 +20,41 @@
     width: 100%;
     margin-bottom: 50px;
 
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
   }
   &__content {
     display: flex;
+
+    @media (max-width: 1280px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
-  &__image {}
+  &__image {
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1280px) {
+      margin-bottom: 20px;
+    }
+  }
 
   &__body {
     padding: 100px 0px 0px 50px;
 
     position: relative;
+
+    @media (max-width: 1280px) {
+      padding: 0px;
+    }
+
   }
 
   &__subtitle {
@@ -55,6 +78,23 @@
       font-weight: 800;
       font-size: 30px;
     }
+
+    @media (max-width: 1280px) {
+      text-align: center;
+      margin-bottom: 40px;
+      &:before {
+        width: 100%;
+        height: 8px;
+        left: 0px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      h3 {
+        font-size: 24px;
+      }
+    }
+
   }
   &__date {
     color: #1E1E1E;
@@ -64,6 +104,11 @@
     max-width: 620px;
 
     line-height: 200%;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+
   }
   &__button {
     display: inline-block;

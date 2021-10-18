@@ -3,12 +3,6 @@ import './Blog.scss';
 
 import mainPhoto from '../../assets/images/blog/mainPhoto.jpeg';
 
-import photo1 from '../../assets/images/instagram/1.jpeg';
-import photo2 from '../../assets/images/instagram/2.jpeg';
-import photo3 from '../../assets/images/instagram/3.jpeg';
-import photo4 from '../../assets/images/instagram/4.jpeg';
-import photo5 from '../../assets/images/instagram/5.jpeg';
-
 
 export const Blog: React.FC = () => {
     return (
