@@ -21,6 +21,11 @@
     background: url("../../assets/images/instagram/instIcon.svg") left center no-repeat;
 
     margin-bottom: 45px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
   }
 
   &__gallery {
