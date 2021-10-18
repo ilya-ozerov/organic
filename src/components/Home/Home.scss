@@ -124,6 +124,12 @@
     &:last-child {
       margin-right: 0;
     }
+
+    transition-duration: 0.2s;
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
   }
 
   &__social-item {
@@ -143,6 +149,12 @@
     &:last-child {
       margin-right: 0;
     }
+
+    transition-duration: 0.2s;
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
   }
 
   &__list {
@@ -159,6 +171,12 @@
 
       &:last-child {
         margin-right: 0;
+      }
+
+      transition-duration: 0.2s;
+
+      &:hover {
+        transform: scale(1.2, 1.2);
       }
     }
 
@@ -216,7 +234,7 @@
       }
 
       &:hover {
-        transform: scale(1.1, 1.1);
+        transform: scale(1.2, 1.2);
       }
     }
   }
@@ -246,6 +264,12 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      transition-duration: 0.2s;
+
+      &:hover {
+        transform: scale(1.2, 1.2);
       }
     }
 
@@ -282,6 +306,12 @@
     user-select: none;
     cursor: pointer;
 
+    transition-duration: 0.2s;
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+
     @media (min-width: 767px) {
       margin-bottom: 20px;
     }
@@ -316,6 +346,12 @@
 
       user-select: none;
       cursor: pointer;
+
+      transition-duration: 0.2s;
+
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
     }
   }
 
