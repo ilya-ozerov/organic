@@ -59,6 +59,8 @@
 
   // ------------------ //
   &__logo {
+    align-self: center;
+    height: 53px;
     @media (max-width: 1600px) {
       grid-area: logo;
     }
