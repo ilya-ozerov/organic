@@ -58,6 +58,12 @@
 
     position: relative;
 
+    transition-duration: 0.2s;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+
     &::after {
       position: absolute;
       content: '';
