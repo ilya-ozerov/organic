@@ -15,6 +15,16 @@ $columnsMargin: 0px -100px;
     align-items: center;
     justify-content: center;
     margin: $columnsMargin;
+
+    @media (max-width: 1124px) {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
+
   }
 
   &__body {
@@ -27,6 +37,11 @@ $columnsMargin: 0px -100px;
 
     //background-color: #0AA566;
 
+    @media (max-width: 1124px) {
+      padding: 0;
+      margin: 0px 0px 20px 0px;
+    }
+
   }
   &__title {
     margin-bottom: 43px;
@@ -37,11 +52,22 @@ $columnsMargin: 0px -100px;
     max-width: 511px;
     line-height: 200%;
     margin-bottom: 60px;
+
+    @media (max-width: 1124px) {
+      text-align: center;
+    }
+
   }
   &__button {
+    display: flex;
     button {
       width: 300px;
     }
+    @media (max-width: 1124px) {
+      display: flex;
+      justify-content: center;
+    }
+
   }
 
   &__content {
@@ -49,25 +75,54 @@ $columnsMargin: 0px -100px;
   }
 
   &__image {
-    //position: relative;
     padding: $columnsPadding;
 
-    //flex: 1 1 50%;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
 
+    @media (max-width: 1124px) {
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__label {
 
     position: relative;
 
+
+
+    @media (max-width: 900px) {
+      width: 200px;
+    }
+
+    @media (max-width: 500px) {
+      width: 150px;
+    }
+
     img {
       position: absolute;
       top: 15px;
       left: -165px;
+
+      display: block;
+      max-width: 100%;
+
+      @media (max-width: 900px) {
+        top: 15px;
+        left: -50px;
+      }
+
+      @media (max-width: 500px) {
+        top: -25px;
+        left: -50px;
+      }
+
     }
 
     p {
@@ -79,6 +134,18 @@ $columnsMargin: 0px -100px;
       font-family: Catatan;
       z-index: 2;
       transform: rotate(-20deg);
+
+      @media (max-width: 900px) {
+        top: 50px;
+        left: -16px;
+        font-size: 24px;
+      }
+
+      @media (max-width: 500px) {
+        top: 0px;
+        left: -20px;
+        font-size: 18px;
+      }
     }
   }
 }
