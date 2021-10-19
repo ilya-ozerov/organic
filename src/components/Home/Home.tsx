@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import './Home.scss';
 import bg from '../../assets/images/home/bg.png';
 import facebook from '../../assets/images/home/facebook.png';
