@@ -1,7 +1,6 @@
 @import "src/variables";
 
 .footer {
-  //padding: $defaultPadding;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,11 +49,6 @@
     font-weight: 800;
     color: #FFFFFF;
     margin-bottom: 30px;
-
-    @media (max-width: 1600px) {
-      //text-align: center;
-    }
-
   }
 
   // ------------------ //
@@ -117,7 +111,6 @@
     width: 100%;
     @media (max-width: 1600px) {
       grid-area: sub;
-      //max-width: 600px;
     }
   }
 
@@ -150,7 +143,6 @@
   }
 
   &__socials {
-    //background-color: #0AA566;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "empty follow networks";
@@ -181,10 +173,6 @@
       transform: scale(1.2, 1.2);
     }
 
-    @media (max-width: 450px) {
-      //font-size: 14px;
-    }
-
     &:before {
       content: '';
       position: absolute;
@@ -201,7 +189,6 @@
     display: grid;
     grid-auto-flow: column;
     grid-gap: 20px;
-    //background-color: #1E1E1E;
   }
 
   &__network {
