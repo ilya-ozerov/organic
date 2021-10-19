@@ -14,6 +14,7 @@ import paySystem6 from '../../assets/images/footer/payments/Mastercard.svg';
 import paySystem7 from '../../assets/images/footer/payments/Paypal.svg';
 import paySystem8 from '../../assets/images/footer/payments/Shopify Pay.svg';
 import paySystem9 from '../../assets/images/footer/payments/Visa.svg';
+import {CollapseItem} from "../common/Collapse/CollapseItem";
 
 type FooterProps = {
     homeRef: React.RefObject<HTMLDivElement>;
@@ -21,6 +22,15 @@ type FooterProps = {
 }
 
 export const Footer: React.FC<FooterProps> = ({homeRef, scrollTo}) => {
+
+    const collapseItemStyle = {
+        item: "footer__collapse collapse",
+        itemTitle: "collapse__title footer__title",
+        itemBody: "collapse__body",
+        itemIcon: "collapse__icon",
+        itemActive: "collapse__active",
+    }
+
     return (
         <footer className="footer">
 
@@ -120,6 +130,74 @@ export const Footer: React.FC<FooterProps> = ({homeRef, scrollTo}) => {
                         </div>
                     </div>
                 </div>
+
+                <CollapseItem title='Information' style={collapseItemStyle}>
+                    <ul className="collapse__list footer__list">
+                        <li>Search</li>
+                        <li>Contact us</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </CollapseItem>
+
+                <CollapseItem title='Payments' style={collapseItemStyle}>
+                    <div className="collapse__systems footer__systems">
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem1} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem2} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem3} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem4} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem5} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem6} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem7} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem8} alt="pay system"/>
+                            </div>
+                        </div>
+
+                        <div className="collapse__item">
+                            <div className="collapse__image">
+                                <img src={paySystem9} alt="pay system"/>
+                            </div>
+                        </div>
+                    </div>
+                </CollapseItem>
+
             </div>
 
             <div className="footer__bottom">
