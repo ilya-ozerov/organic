@@ -5,9 +5,13 @@ import userPhoto from '../../assets/images/testimonials/userPhoto.png'
 import left from '../../assets/images/testimonials/arrowLeft.png'
 import right from '../../assets/images/testimonials/arrowRight.png'
 
-export const Testimonials: React.FC = () => {
+type TestimonialsProps = {
+    testimonialsRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Testimonials: React.FC<TestimonialsProps> = ({testimonialsRef}) => {
     return (
-        <section className="testimonials">
+        <section ref={testimonialsRef} className="testimonials">
             <div className="testimonials__row">
                 <div className="testimonials__title title">
                     <h2>Why clients <span>LOVE</span> us?</h2>

@@ -6,9 +6,13 @@ import smoothie2 from '../../assets/images/shop/smoothie2.png';
 import smoothie3 from '../../assets/images/shop/smoothie3.png';
 import smoothie4 from '../../assets/images/shop/smoothie4.png';
 
-export const Shop: React.FC = () => {
+type ShopProps = {
+    shopRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Shop: React.FC<ShopProps> = ({shopRef}) => {
     return (
-        <section className="shop">
+        <section ref={shopRef} className="shop">
             <div className="shop__gallery">
                 <div className="shop__item item">
                     <div className="item__image">

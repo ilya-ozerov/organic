@@ -3,10 +3,13 @@ import './Blog.scss';
 
 import mainPhoto from '../../assets/images/blog/mainPhoto.jpeg';
 
+type BlogProps = {
+    blogRef: React.RefObject<HTMLDivElement>;
+}
 
-export const Blog: React.FC = () => {
+export const Blog: React.FC<BlogProps> = ({blogRef}) => {
     return (
-        <section className="blog">
+        <section ref={blogRef} className="blog">
             <div className="blog__row">
 
                 <div className="blog__title title">

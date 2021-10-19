@@ -4,10 +4,13 @@ import './Story.scss';
 import smoothie from '../../assets/images/story/smoothie.png';
 import label from '../../assets/images/story/label.png';
 
+type StoryProps = {
+    storyRef: React.RefObject<HTMLDivElement>;
+}
 
-export const Story: React.FC = () => {
+export const Story: React.FC<StoryProps> = ({storyRef}) => {
     return (
-        <section className="story">
+        <section ref={storyRef} className="story">
             <div className="story__row">
                 <div className="story__body">
                     <div className="story__content">

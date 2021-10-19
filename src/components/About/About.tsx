@@ -3,9 +3,13 @@ import './About.scss';
 import welcome from '../../assets/images/about/welcome.png';
 import line from '../../assets/images/about/line.png';
 
-export const About: React.FC = () => {
+type AboutProps = {
+    aboutRef: React.RefObject<HTMLDivElement>;
+}
+
+export const About: React.FC<AboutProps> = ({aboutRef}) => {
     return (
-        <section className="about">
+        <section ref={aboutRef} className="about">
             <div className="about__image">
                 <img src={welcome} alt="welcome summer"/>
             </div>

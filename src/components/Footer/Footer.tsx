@@ -15,14 +15,18 @@ import paySystem7 from '../../assets/images/footer/payments/Paypal.svg';
 import paySystem8 from '../../assets/images/footer/payments/Shopify Pay.svg';
 import paySystem9 from '../../assets/images/footer/payments/Visa.svg';
 
-export const Footer: React.FC = () => {
+type FooterProps = {
+    homeRef: React.RefObject<HTMLDivElement>;
+    scrollTo: (refObj: React.RefObject<HTMLDivElement>) => void
+}
+
+export const Footer: React.FC<FooterProps> = ({homeRef, scrollTo}) => {
     return (
         <footer className="footer">
 
             <div className="footer__body">
                 <div className="footer__logo logo">
                     Organic <span>fresh foods</span>
-                    {/*<img src="#" alt="our logo"/>*/}
                 </div>
                 <div className="footer__information">
 
@@ -121,7 +125,7 @@ export const Footer: React.FC = () => {
             <div className="footer__bottom">
                 <div className="footer__copy">© 2020. All Rights Reserved.</div>
                 <div className="footer__button">
-                    <button>
+                    <button onClick={() => scrollTo(homeRef)}>
                         Go top
                     </button>
                 </div>

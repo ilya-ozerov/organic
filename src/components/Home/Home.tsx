@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import './Home.scss';
 import bg from '../../assets/images/home/bg.png';
 import facebook from '../../assets/images/home/facebook.png';
@@ -9,21 +9,42 @@ import search from '../../assets/images/home/search.png';
 import cart from '../../assets/images/home/cart.png';
 import user from '../../assets/images/home/user.png';
 
-export const Home: React.FC = () => {
+type HomeProps = {
+    homeRef: React.RefObject<HTMLDivElement>;
+    shopRef: React.RefObject<HTMLDivElement>;
+    storyRef: React.RefObject<HTMLDivElement>;
+    aboutRef: React.RefObject<HTMLDivElement>;
+    blogRef: React.RefObject<HTMLDivElement>;
+    testimonialsRef: React.RefObject<HTMLDivElement>;
+
+    scrollTo: (refObj: React.RefObject<HTMLDivElement>) => void
+}
+
+export const Home: React.FC<HomeProps> = ({
+                                              homeRef, storyRef,
+                                              shopRef, testimonialsRef,
+                                              aboutRef, blogRef,
+                                              scrollTo
+                                          }) => {
 
     const [isBurger, setIsBurger] = useState(false);
 
     const toggleBurger = (toggleValue: boolean) => {
-        setIsBurger(toggleValue);
-        // if (document.body.style.overflow !== "hidden") {
-        //     document.body.style.overflow = "hidden";
-        // } else {
-        //     document.body.style.overflow = "scroll";
-        // }
+        if (document.body.style.overflow !== "hidden") {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "scroll";
+        }
+        setTimeout(() => setIsBurger(toggleValue))
+    }
+
+    const mobileScrollTo = (refObj: React.RefObject<HTMLDivElement>) => {
+        toggleBurger(false);
+        scrollTo(refObj);
     }
 
     return (
-        <section className="home">
+        <section ref={homeRef} className="home">
             <div className="home__container">
                 <div className="home__bg">
                     <img draggable={"false"} src={bg} alt="bg"/>
@@ -45,12 +66,12 @@ export const Home: React.FC = () => {
                                 <div onClick={() => toggleBurger(false)} className="mobile__cross"></div>
 
                                 <ul className="mobile__list">
-                                    <li>Home</li>
-                                    <li>Shop</li>
-                                    <li>Story</li>
-                                    <li>About</li>
-                                    <li>Blog</li>
-                                    <li>Testimonials</li>
+                                    <li onClick={() => mobileScrollTo(homeRef)}>Home</li>
+                                    <li onClick={() => mobileScrollTo(shopRef)}>Shop</li>
+                                    <li onClick={() => mobileScrollTo(storyRef)}>Story</li>
+                                    <li onClick={() => mobileScrollTo(aboutRef)}>About</li>
+                                    <li onClick={() => mobileScrollTo(blogRef)}>Blog</li>
+                                    <li onClick={() => mobileScrollTo(testimonialsRef)}>Testimonials</li>
                                 </ul>
 
                                 <div className="mobile__services">
@@ -82,12 +103,12 @@ export const Home: React.FC = () => {
 
                         <div className="header__menu">
                             <ul className="header__list">
-                                <li>Home</li>
-                                <li>Shop</li>
-                                <li>Story</li>
-                                <li>About</li>
-                                <li>Blog</li>
-                                <li>Testimonials</li>
+                                <li onClick={() => scrollTo(homeRef)}>Home</li>
+                                <li onClick={() => scrollTo(shopRef)}>Shop</li>
+                                <li onClick={() => scrollTo(storyRef)}>Story</li>
+                                <li onClick={() => scrollTo(aboutRef)}>About</li>
+                                <li onClick={() => scrollTo(blogRef)}>Blog</li>
+                                <li onClick={() => scrollTo(testimonialsRef)}>Testimonials</li>
                             </ul>
                         </div>
                         <div className="header__logo logo">
