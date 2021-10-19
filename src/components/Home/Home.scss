@@ -12,13 +12,10 @@
 
   &__bg {
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 100%;
       position: absolute;
-      bottom: 0;
-      left: 50%;
-      margin-left: -50%;
+      left: 0; bottom: 0; right: 0;
+      margin: auto;
     }
   }
 
@@ -117,7 +114,6 @@
 
     width: 30px;
     height: 30px;
-    //background-color: #FFFFFF;
     border-radius: 50%;
     margin-right: 20px;
 
@@ -184,7 +180,6 @@
 
   &__mobile {
     width: 400px;
-    //height: 500px;
     background-color: #0AA566;
     position: absolute;
     top: 15px;
@@ -193,10 +188,12 @@
 
     @media (max-width: 767px) {
       position: fixed;
+      z-index: 999999;
       width: 100vw;
       height: 100vh;
       top: 0;
-      padding: 15px 10px;
+      padding: 10px;
+      overflow: auto;
     }
 
   }
@@ -206,8 +203,9 @@
 
   @media (max-width: 1450px) {
     &__burger {
+      padding: 10px;
       z-index: 2;
-      width: 30px;
+      width: 50px;
       display: grid;
       align-items: center;
       grid-template: repeat(3, 8px) / 1fr;
@@ -244,20 +242,16 @@
 
   display: flex;
   flex-direction: column;
-  //align-items: center;
-  //justify-content: center;
 
   &__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
 
     li {
       padding: 15px;
       user-select: none;
       cursor: pointer;
-      margin-bottom: 20px;
 
       font-size: 20px;
       font-weight: 700;
@@ -272,10 +266,6 @@
         transform: scale(1.2, 1.2);
       }
     }
-
-    @media (max-width: 767px) {
-      margin-bottom: 50px;
-    }
   }
 
   &__socials {
@@ -285,16 +275,9 @@
     align-items: center;
     justify-items: center;
     gap: 20px;
-
-    @media (max-width: 767px) {
-      //background-color: #CAE941;
-    }
-
   }
 
   &__social {
-
-
     background-color: #FFFFFF;
     width: 40px;
     height: 40px;
@@ -311,11 +294,6 @@
     &:hover {
       transform: scale(1.2, 1.2);
     }
-
-    @media (min-width: 767px) {
-      margin-bottom: 20px;
-    }
-
   }
 
   &__services {
@@ -325,13 +303,12 @@
     }
 
     @media (max-width: 767px) {
-      flex: 1 1 auto;
       align-self: center;
       display: grid;
       grid-auto-flow: column;
       justify-items: center;
       gap: 20px;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
   }
 
@@ -343,7 +320,6 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-
       user-select: none;
       cursor: pointer;
 
@@ -357,8 +333,10 @@
 
   &__cross {
     grid-area: cross;
-    width: 30px;
-    height: 30px;
+    padding: 10px;
+
+    width: 50px;
+    height: 50px;
     position: relative;
 
     transition-duration: 0.2s;
@@ -370,8 +348,9 @@
     &::before {
       content: " ";
       position: absolute;
-      left: 0;
-      top: 15px;
+
+      left: 10px;
+      top: 25px;
       transform: rotate(45deg);
       height: 2px;
       width: 30px;
@@ -383,8 +362,10 @@
     &::after {
       content: " ";
       position: absolute;
-      left: 0;
-      top: 15px;
+
+      left: 10px;
+      top: 25px;
+
       transform: rotate(-45deg);
       height: 2px;
       width: 30px;
