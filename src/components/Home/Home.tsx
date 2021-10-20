@@ -8,6 +8,7 @@ import instagram from '../../assets/images/home/instagram.png';
 import search from '../../assets/images/home/search.png';
 import cart from '../../assets/images/home/cart.png';
 import user from '../../assets/images/home/user.png';
+import {Cart} from "../Cart/Cart";
 
 type HomeProps = {
     homeRef: React.RefObject<HTMLDivElement>;
@@ -28,12 +29,17 @@ export const Home: React.FC<HomeProps> = ({
                                           }) => {
 
     const [isBurger, setIsBurger] = useState(false);
+    const [isCart, setIsCart] = useState(false);
 
     const toggleBurger = (toggleValue: boolean) => {
-        if (document.body.style.overflow !== "hidden") {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "scroll";
+        console.log(window.innerWidth)
+
+        if (window.innerWidth <= 767) {
+            if (document.body.style.overflow !== "hidden") {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "scroll";
+            }
         }
         setTimeout(() => setIsBurger(toggleValue))
     }
@@ -54,16 +60,17 @@ export const Home: React.FC<HomeProps> = ({
                     <header className="home__header header">
 
                         {!isBurger &&
-                        <div onClick={() => toggleBurger(true)} className="header__burger">
+                        <div onClick={() => toggleBurger(true)} onMouseEnter={() => toggleBurger(true)}
+                             className="header__burger">
                             <div></div>
                         </div>
                         }
 
                         {
                             isBurger &&
-                            <div className="header__mobile mobile">
+                            <div onMouseLeave={() => toggleBurger(false)} className="header__mobile mobile popup">
 
-                                <div onClick={() => toggleBurger(false)} className="mobile__cross"></div>
+                                <div onClick={() => toggleBurger(false)} className="mobile__cross cross"></div>
 
                                 <ul className="mobile__list">
                                     <li onClick={() => mobileScrollTo(homeRef)}>Home</li>
@@ -118,13 +125,16 @@ export const Home: React.FC<HomeProps> = ({
                         <div className="header__panel">
                             <div className="header__services">
                                 <div className="header__service-item">
-                                    <img draggable={"false"} src={search} alt="facebook icon"/>
+                                    <img className="header__icon" draggable={"false"} src={search} alt="facebook icon"/>
                                 </div>
                                 <div className="header__service-item">
-                                    <img draggable={"false"} src={user} alt="facebook icon"/>
+                                    <img className="header__icon" draggable={"false"} src={user} alt="facebook icon"/>
                                 </div>
                                 <div className="header__service-item">
-                                    <img draggable={"false"} src={cart} alt="facebook icon"/>
+                                    <img className="header__icon" onClick={() => setIsCart(true)} draggable={"false"}
+                                         src={cart}
+                                         alt="facebook icon"/>
+                                    {isCart && <Cart setIsCart={setIsCart} />}
                                 </div>
                             </div>
                             <div className="header__socials">
@@ -142,7 +152,7 @@ export const Home: React.FC<HomeProps> = ({
                     </header>
 
                     <div className="home__button button">
-                        <button>Shop now</button>
+                        <button onClick={() => scrollTo(shopRef)}>Shop now</button>
                     </div>
                 </div>
             </div>
