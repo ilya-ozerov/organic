@@ -8,20 +8,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  &__item {
-    &:nth-child(1) {
-      background-color: #64281C;
-    }
-    &:nth-child(2) {
-      background-color: #1C896E;
-    }
-    &:nth-child(3) {
-      background-color: #F5B039;
-    }
-    &:nth-child(4) {
-      background-color: #C24A1F;
-    }
-  }
+  &__item {}
 }
 
 .item {
