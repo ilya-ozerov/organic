@@ -1,15 +1,15 @@
 .wrapper {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   min-height: 100vh;
 }
 
 .logo {
   font-size: 53px;
   position: relative;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
   user-select: none;
   text-align: center;
   width: 220px;
@@ -31,13 +31,12 @@
 }
 
 .title {
-
   text-align: center;
 
   h2 {
     font-size: 50px;
     font-weight: 800;
-    color: #F7AE3B;
+    color: #f7ae3b;
   }
 
   @media (max-width: 767px) {
@@ -51,10 +50,10 @@
   button {
     font-size: 24px;
     font-weight: 800;
-    background-color: #0AA566;
+    background-color: #0aa566;
     padding: 20px 115px 20px 30px;
     border-radius: 40px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     position: relative;
 
@@ -66,7 +65,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 30px;
       height: 16px;
       top: calc(50% - 7px);
@@ -110,7 +109,7 @@
     transform: rotate(45deg);
     height: 2px;
     width: 30px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 
     animation: cross-left-line 0.2s linear;
   }
@@ -125,15 +124,14 @@
     transform: rotate(-45deg);
     height: 2px;
     width: 30px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 
     animation: cross-right-line 0.2s linear;
   }
 }
 
 .popup {
-  min-width: 400px;
-  background-color: #0AA566;
+  background-color: #0aa566;
   position: absolute;
   z-index: 3;
   padding: 10px;
