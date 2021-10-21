@@ -127,6 +127,21 @@
     }
   }
 
+  &__service-label {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-size: 14px;
+
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
   &__social-item {
     position: relative;
     z-index: 2;

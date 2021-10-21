@@ -9,6 +9,8 @@ import search from '../../assets/images/home/search.png';
 import cart from '../../assets/images/home/cart.png';
 import user from '../../assets/images/home/user.png';
 import { Cart } from "../Cart/Cart";
+import { useSelector } from 'react-redux';
+import { selectTotalProducts } from '../../redux/cartSelectors';
 
 type HomeProps = {
     homeRef: React.RefObject<HTMLDivElement>;
@@ -30,6 +32,8 @@ export const Home: React.FC<HomeProps> = ({
 
     const [isBurger, setIsBurger] = useState(false);
     const [isCart, setIsCart] = useState(false);
+
+    const totalProducts = useSelector(selectTotalProducts);
 
     const toggleBurger = (toggleValue: boolean) => {
         setIsBurger(toggleValue);
@@ -125,6 +129,10 @@ export const Home: React.FC<HomeProps> = ({
                                     <img className="header__icon" onClick={() => setIsCart(true)} draggable={"false"}
                                         src={cart}
                                         alt="facebook icon" />
+                                    {
+                                        totalProducts > 0 &&
+                                        <div className="header__service-label">{totalProducts}</div>
+                                    }
                                     {isCart && <Cart setIsCart={setIsCart} />}
                                 </div>
                             </div>
