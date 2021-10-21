@@ -70,8 +70,15 @@
   }
 
   &__cart {
+    background-color: #0aa566;
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    border-radius: 20px;
+    border: 3px solid #f2ae35;
     top: -20px;
     right: -20px;
+    width: 500px;
   }
 
   &__services {
@@ -125,21 +132,6 @@
     &:last-child {
       margin-right: 0;
     }
-  }
-
-  &__service-label {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    font-size: 14px;
-
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
   }
 
   &__social-item {
@@ -200,6 +192,12 @@
   }
 
   &__mobile {
+    background-color: #0aa566;
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    border-radius: 20px;
+    border: 3px solid #f2ae35;
     height: 460px;
     width: 400px;
     top: -10px;
@@ -211,7 +209,7 @@
     @media (max-width: 767px) {
       animation: full-scr-mobile-menu ease-in-out 2.5s;
       position: fixed;
-      z-index: 999999;
+      z-index: 4;
       width: 100vw;
       height: 100vh;
       top: 0;
@@ -346,6 +344,7 @@
       border-radius: 50%;
       user-select: none;
       cursor: pointer;
+      position: relative;
 
       transition-duration: 0.2s;
 
@@ -358,12 +357,39 @@
   &__cross {
     justify-self: start;
   }
+
+  &__cart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #0aa566;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 10px;
+  }
+}
+
+.service-label {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  font-size: 14px;
+
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 @keyframes full-scr-mobile-menu {
   0% {
-    width: 0%;
-    height: 0%;
+    height: 60px;
+    width: 60px;
   }
 
   50% {

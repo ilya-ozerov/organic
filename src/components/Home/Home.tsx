@@ -63,7 +63,7 @@ export const Home: React.FC<HomeProps> = ({
 
                         {
                             isBurger &&
-                            <div onMouseLeave={() => toggleBurger(false)} className="header__mobile mobile popup">
+                            <div onMouseLeave={() => toggleBurger(false)} className="header__mobile mobile">
 
                                 <div onClick={() => toggleBurger(false)} className="mobile__cross cross"></div>
 
@@ -76,6 +76,8 @@ export const Home: React.FC<HomeProps> = ({
                                     <li onClick={() => mobileScrollTo(testimonialsRef)}>Testimonials</li>
                                 </ul>
 
+                                {isCart && <Cart className="mobile__cart" setIsCart={setIsCart} />}
+
                                 <div className="mobile__services">
                                     <div className="mobile__service">
                                         <img draggable={"false"} src={search} alt="facebook icon" />
@@ -84,7 +86,11 @@ export const Home: React.FC<HomeProps> = ({
                                         <img draggable={"false"} src={user} alt="facebook icon" />
                                     </div>
                                     <div className="mobile__service">
-                                        <img draggable={"false"} src={cart} alt="facebook icon" />
+                                        <img onClick={() => setIsCart(true)} draggable={"false"} src={cart} alt="facebook icon" />
+                                        {
+                                            totalProducts > 0 &&
+                                            <div className="service-label">{totalProducts}</div>
+                                        }
                                     </div>
                                 </div>
 
@@ -131,9 +137,9 @@ export const Home: React.FC<HomeProps> = ({
                                         alt="facebook icon" />
                                     {
                                         totalProducts > 0 &&
-                                        <div className="header__service-label">{totalProducts}</div>
+                                        <div className="service-label">{totalProducts}</div>
                                     }
-                                    {isCart && <Cart setIsCart={setIsCart} />}
+                                    {isCart && <Cart className="header__cart" setIsCart={setIsCart} />}
                                 </div>
                             </div>
                             <div className="header__socials">
