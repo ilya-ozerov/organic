@@ -18,6 +18,7 @@ export const Cart: React.FC<CartProps> = ({ toggleCart, className }) => {
     const emptyStyle: React.CSSProperties = {
         textAlign: 'center',
         fontSize: '24px',
+        lineHeight: '200%',
         fontWeight: 700,
     }
 
@@ -26,19 +27,35 @@ export const Cart: React.FC<CartProps> = ({ toggleCart, className }) => {
     })
 
     return (
-        <div className={className + " cart"}>
+        <div onMouseLeave={() => toggleCart(false)} className={className + " cart"}>
 
             <div onClick={() => toggleCart(false)}
                 className="cart__cross cross"></div>
 
-            <div className="cart__body">
-                {productsList.length === 0 ? <div style={emptyStyle}>
+
+            {
+                productsList.length === 0 &&
+                <div style={emptyStyle}>
                     Cart is Empty
-                </div> : productsList}
-            </div>
-            <div className="cart__total">
-                {totalPrice === 0 ? null : totalPrice.toFixed(2) + '$'}
-            </div>
+                </div>
+            }
+
+            {
+                productsList.length > 0 &&
+                <React.Fragment>
+                    <div className="cart__body">
+                        {productsList}
+                    </div>
+                    <div className="cart__total">
+                        <span>Total price: </span>
+                        {totalPrice === 0 ? null : totalPrice.toFixed(2) + '$'}
+                    </div>
+
+                    <div className="cart__button button">
+                        <button>Buy</button>
+                    </div>
+                </React.Fragment>
+            }
         </div>
     );
 }

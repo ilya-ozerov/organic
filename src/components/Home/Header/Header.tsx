@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionRefs, scrollTo, className
         <header className={className + " header"}>
 
             {!isBurger &&
-                <div onClick={() => toggleBurger(true)} onMouseEnter={() => toggleBurger(true)}
+                <div onClick={() => toggleBurger(true)}
                     className="header__burger">
                     <div></div>
                 </div>
