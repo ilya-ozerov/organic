@@ -24,7 +24,7 @@ export const SmoothieItem: React.FC<SmoothieItemProps> = ({ smoothie }) => {
         setCurrentProductIndex(products.findIndex(
             p => p.product.id === smoothie.id)
         )
-    }, [products])
+    }, [products, smoothie])
 
     const increaseAmount = () => {
         dispatch(addProduct({
