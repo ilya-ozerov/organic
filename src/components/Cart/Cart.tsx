@@ -1,18 +1,16 @@
 import React from 'react';
 import './Cart.scss';
-
-import smoothie1 from '../../assets/images/shop/smoothie1.png';
 import { useSelector } from "react-redux";
 import { selectProducts, selectTotalPrice } from "../../redux/cartSelectors";
 import { CartItem } from "./CartItem";
 
 type CartProps = {
-    setIsCart: (toggleVal: boolean) => void
+    toggleCart: (toggleVal: boolean) => void
 
     className: string;
 }
 
-export const Cart: React.FC<CartProps> = ({ setIsCart, className }) => {
+export const Cart: React.FC<CartProps> = ({ toggleCart, className }) => {
 
     const products = useSelector(selectProducts);
     const totalPrice = useSelector(selectTotalPrice);
@@ -30,7 +28,7 @@ export const Cart: React.FC<CartProps> = ({ setIsCart, className }) => {
     return (
         <div className={className + " cart"}>
 
-            <div onClick={() => setIsCart(false)}
+            <div onClick={() => toggleCart(false)}
                 className="cart__cross cross"></div>
 
             <div className="cart__body">
