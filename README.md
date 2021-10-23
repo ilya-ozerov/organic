@@ -1,46 +1,22 @@
 # Getting Started with Create React Shop
 
-This project was bootstrapped with [Create React Shop](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `yarn install`
 ### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshots
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React Shop documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Home section screenshot](https://user-images.githubusercontent.com/91267121/138548430-f8b63923-a298-4d9c-ab0c-600e8714393e.png)
+![What section screenshot](https://user-images.githubusercontent.com/91267121/138548444-eb931ea2-c3d9-4024-bb51-0b8c9690717f.png)
+![About section screenshot](https://user-images.githubusercontent.com/91267121/138548454-b31de36e-6a93-412a-b69e-2c11ffe0dbfc.png)
+![Shop section screenshot](https://user-images.githubusercontent.com/91267121/138548460-73a72b11-5b71-4270-9b83-e41c71af7263.png)
+![Story section screenshot](https://user-images.githubusercontent.com/91267121/138548463-0b2f46d1-00e9-4c1a-ad57-45bffd1d95e1.png)
+![Tetsimonials section screenshot](https://user-images.githubusercontent.com/91267121/138548469-85c89023-2130-4f1b-947d-46b2186f4753.png)
+![Blog section screenshot](https://user-images.githubusercontent.com/91267121/138548488-3b85fdf2-6c97-4b3c-a59f-257512c2666b.png)
+![Footer section screenshot](https://user-images.githubusercontent.com/91267121/138548497-b60f5f09-a604-4a51-944f-0e5bb32606d2.png)
