@@ -41,7 +41,6 @@
         top: -20px;
         right: -20px;
         width: 500px;
-        animation: cart ease-in-out 0.5s;
         overflow: hidden;
     }
 
@@ -227,6 +226,19 @@
     }
     &-exit {
         animation: mobile-menu 0.45s ease-in-out reverse;
+    }
+    &-exit-active {
+    }
+}
+
+.cart-transition {
+    &-enter {
+        animation: cart 0.45s ease-in-out;
+    }
+    &-enter-active {
+    }
+    &-exit {
+        animation: cart 0.45s ease-in-out reverse;
     }
     &-exit-active {
     }

@@ -92,7 +92,12 @@ export const Header: React.FC<HeaderProps> = ({ sectionRefs, scrollTo, className
                             totalProducts > 0 &&
                             <div className="service-label">{totalProducts}</div>
                         }
-                        {isCart && <Cart className="header__cart" toggleCart={toggleCart} />}
+
+                        <CSSTransition in={isCart} timeout={400} classNames="cart-transition" unmountOnExit>
+                            <Cart className="header__cart" toggleCart={toggleCart} />
+                        </CSSTransition>
+
+                        {/* {isCart && <Cart className="header__cart" toggleCart={toggleCart} />} */}
                     </div>
                 </div>
                 <div className="header__socials">
