@@ -165,12 +165,9 @@
         width: 400px;
         top: -10px;
         left: -10px;
-
-        animation: mobile-menu ease-in-out 0.5s;
         overflow: hidden;
 
         @media (max-width: 767px) {
-            animation: full-scr-mobile-menu ease-in-out 0.5s;
             position: fixed;
             z-index: 4;
             width: 100vw;
@@ -222,6 +219,19 @@
     }
 }
 
+.mobile-menu-transition {
+    &-enter {
+        animation: mobile-menu 0.45s ease-in-out;
+    }
+    &-enter-active {
+    }
+    &-exit {
+        animation: mobile-menu 0.45s ease-in-out reverse;
+    }
+    &-exit-active {
+    }
+}
+
 .service-label {
     position: absolute;
     top: -12px;
@@ -235,20 +245,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-}
-
-@keyframes full-scr-mobile-menu {
-    0% {
-        transform: scale(0, 0);
-    }
-
-    80% {
-        transform: scale(1.03, 1.03);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
 }
 
 @keyframes mobile-menu {

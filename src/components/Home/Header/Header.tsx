@@ -11,6 +11,7 @@ import { Cart } from "../../Cart/Cart";
 import { useSelector } from 'react-redux';
 import { selectTotalProducts } from '../../../redux/cartSelectors';
 import { MobileMenu } from './MobileMenu/MobileMenu';
+import { CSSTransition } from 'react-transition-group';
 
 type HeaderProps = {
     sectionRefs: {
@@ -55,12 +56,11 @@ export const Header: React.FC<HeaderProps> = ({ sectionRefs, scrollTo, className
                 </div>
             }
 
-            {
-                isBurger &&
+            <CSSTransition in={isBurger} timeout={400} classNames="mobile-menu-transition" unmountOnExit>
                 <MobileMenu className="header__mobile" sectionRefs={sectionRefs} isCart={isCart}
                     mobileScrollTo={mobileScrollTo} totalProducts={totalProducts} toggleBurger={toggleBurger}
                     toggleCart={toggleCart} />
-            }
+            </CSSTransition>
 
             <div className="header__menu">
                 <ul className="header__list">
