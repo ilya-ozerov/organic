@@ -29,6 +29,12 @@
       width: 100%;
       margin-bottom: 150px;
     }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "body" "photo";
+    }
   }
   &__background {
     position: absolute;
